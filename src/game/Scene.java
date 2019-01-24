@@ -109,7 +109,7 @@ public class Scene implements ActionListener {
 				entityToRemove = e;
 			}
 			// Handle physics of enemy movement
-			e.walkMovement();
+			e.walkMovement(program.getDifficulty());
 			// Damage enemy if hit by bullet
 			if (enemyCollision(e)) {
 				if (!player.isInvulnerable()) {
@@ -143,7 +143,7 @@ public class Scene implements ActionListener {
 			bullets.remove(b);
 		}
 		// Handle physics and side scrolling based on character movement
-		player.walkMovement();
+		player.walkMovement(program.getDifficulty());
 		handleScrolling();
 		if (wasGoalHit()) {
 			program.switchToGameWon();

@@ -21,9 +21,9 @@ public class Enemy extends Entity{
 		timerNum = 0;
 	}
 	
-	public void walkMovement() {
+	public void walkMovement(Difficulty diff) {
 		super.walk(this.directionFacing);
-		super.walkMovement();
+		super.walkMovement(diff);
 		timerNum++;
 		if ((timerNum % 126) < 63) {
 			dx = MOVEMENT_SPEED;

@@ -11,9 +11,9 @@ public class JumpingEnemy extends Entity {
 	
 	/* This routine will determine how a jumping enemy will move. The enemy will jump every couple
 	 * of seconds and stay in the same place  */
-	public void walkMovement() {
+	public void walkMovement(Difficulty diff) {
 //		Apply physics to enemy so that gravity kicks in and brings the enemy down after they've jumped
-		super.walkMovement();
+		super.walkMovement(diff);
 //		Add time to jump timer
 		timerNum++;
 //		If specific number of seconds has passed:
@@ -21,6 +21,7 @@ public class JumpingEnemy extends Entity {
 //			Make enemy jump
 			super.jump();
 		}
+		
 	}
 
 }

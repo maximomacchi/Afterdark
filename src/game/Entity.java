@@ -153,7 +153,7 @@ public class Entity {
 	
 	// Applies laws of physics to Entity object, such as applying friction
 	// and gravity
-	public void walkMovement() {
+	public void walkMovement(Difficulty diff) {
 		move(dx, dy);
 		if(dx > 0) {
 			dx -= FRICTION;
