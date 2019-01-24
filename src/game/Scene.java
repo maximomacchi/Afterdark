@@ -55,6 +55,10 @@ public class Scene implements ActionListener {
 			npcs.add(e);
 		}
 //		Add in JumpingEnemy objects to scene
+		for (int i = 2500; i < 12001; i += 3000) {
+			JumpingEnemy e = new JumpingEnemy("sprite", i, MainApplication.WINDOW_HEIGHT - 200, 3, 0);
+			npcs.add(e);
+		}
 		music = AudioPlayer.getInstance();
 		center(player);
 		death = ""; 
