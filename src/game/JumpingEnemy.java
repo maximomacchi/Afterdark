@@ -17,9 +17,30 @@ public class JumpingEnemy extends Entity {
 //		Add time to jump timer
 		timerNum++;
 //		If specific number of seconds has passed:
-		if ((timerNum % 100) == 50) {
-//			Make enemy jump
-			super.jump();
+		switch(diff) {
+		case EASY:
+			if ((timerNum % 300) == 50) {
+//				Make enemy jump
+				super.jump();
+			}
+			break;
+		case MEDIUM:
+			if ((timerNum % 200) == 50) {
+				super.jump();
+			}
+			break;
+		case HARD:
+			if ((timerNum % 100) == 50) {
+				super.jump();
+			}
+			break;
+		default:
+			if ((timerNum % 300) == 50) {
+//				Make enemy jump
+				super.jump();
+			}
+			break;
+			
 		}
 		
 	}
